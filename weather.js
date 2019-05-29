@@ -8,7 +8,7 @@ class Weather{
   
   async getWeather(city){
     const response = await fetch (
-      `https://api.apixu.com/v1/forecast.json?key=c9b1a9fe1cfe489b952184602192805&q=${this.city}`
+      `https://api.apixu.com/v1/forecast.json?key=c9b1a9fe1cfe489b952184602192805&q=${this.city}&days=7`
     )
     const responseData = await response.json();
   
