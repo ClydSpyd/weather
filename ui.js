@@ -27,7 +27,7 @@ class UI {
 
     const time = new Date(weather.location.localtime);
     
-    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday','Monday','Tuesday'];
     const months = ['January','Febuary','March','April','May','June','July','August','September','October','November','December']
 
     let timeFormated = `${days[time.getDay()]} ${time.getDate()}th ${months[time.getMonth()]} ${time.getHours()}:${time.getMinutes()}`// Saturday, September 17, 2016
