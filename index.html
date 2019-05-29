@@ -7,33 +7,92 @@
   <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
   <title>WeatherJS</title>
   <style>
-  .light{
+  
+  .eight{
     font-size: .8rem;
-    color: rgb(61, 61, 61);
+  }
+  .footSml{
+    font-size: .8rem;
+  }
+
+  @media (min-width: 992px){
+    .cBody{
+    min-height:150px;
+  }
   }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
-        <h1 id="w-location"></h1>
-        <h3 class="text-dark" id="w-desc"></h3>
-        <h3 id="w-temp"></h3>
-        <img id="w-icon">
-        <ul id="w-details" class="list-group mt-3">
-          <!-- <li class="list-group-item" id="w-temp"></li> -->
-          <li class="list-group-item" id="w-humidity"></li>
-          <li class="list-group-item" id="w-max"></li>
-          <li class="list-group-item" id="w-min"></li>
-        </ul>
-        <p class='text-light mt-3 mb-1' id='astro'></p>
-        <p class='light 'id='localTime'></p>
+    <!-- <div class="row"> -->
+    <div class="col-md-8 mx-auto text-center bg-secondary mt-5 p-5 rounded">
+      <h1 id="w-location"></h1>
+      <h3 class="text-dark" id="w-desc"></h3>
+      <h3 id="w-temp"></h3>
+      <img id="w-icon">
+      <p class='text-muted eight'id='localTime'></p>
+      <ul id="w-details" class="list-group mt-3">
+        <!-- <li class="list-group-item" id="w-temp"></li> -->
+        <li class="list-group-item" id="w-humidity"></li>
+        <li class="list-group-item" id="w-max"></li>
+        <li class="list-group-item" id="w-min"></li>
+      </ul>
+      <p class='text-muted eight mt-3 mb-1' id='astro'></p>
+      
+      <!-- <p class='text-light mt-3 mb-2' id='threeDay'>3-day forecast</p>
+        <div class="d-flex flex-row mt-0">
+          <div class="col-md-4 col-sm-12 bg-light border forecastDay"></div>
+          <div class="col-md-4 bg-light border forecastDay"></div>
+          <div class="col-md-4 bg-light border forecastDay"></div>
+        </div> -->
+        
         <hr>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#locModal">
-            Change Location
-          </button>
+        <h6>3-Day Forecast</h6>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-11 my-1 p-1">
+            <div class="card text-center ">
+              <div class="card-header" id='forecast1'>
+              </div>
+              <div class="card-body cBody">
+                <img src="" id='foreImg1'>
+                <p class="card-text" id='foreInner1'></p>
+              </div>
+              <div class="card-footer text-muted footSml" id='foreFooter1'>
+                2 days ago
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-11 my-1 p-1">
+            <div class="card text-center">
+              <div class="card-header" id='forecast2'>
+              </div>
+              <div class="card-body cBody">
+                <img src="" id='foreImg2'>
+                <p class="card-text" id='foreInner2'></p>
+              </div>
+              <div class="card-footer text-muted footSml" id='foreFooter2'>
+                2 days ago
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-11 my-1 p-1">
+            <div class="card text-center">
+              <div class="card-header" id='forecast3'>
+              </div>
+              <div class="card-body cBody">
+                <img src="" id='foreImg3'>
+                <p class="card-text" id='foreInner3'></p>
+              </div>
+              <div class="card-footer text-muted footSml" id='foreFooter3'>
+                2 days ago
+              </div>
+            </div>
+        </div>
       </div>
+    <hr class='mt-4'>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#locModal">
+        Change Location
+    </button>
     </div>
   </div>
 
@@ -71,7 +130,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-  <script src="storage.js"></script>
   <script src="weather.js"></script>
   <script src="ui.js"></script>
   <script src="app.js"></script>
